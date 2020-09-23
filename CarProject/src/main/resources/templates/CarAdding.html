@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Car Managment</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Tablo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Kayıt</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Düzen</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid h-25 mr-auto">
+    <p>Araba bilgilerini giriniz</p>
+</div>
+<div class="container">
+    <form class="col-8 mr-auto" action="#" method="post" th:action="@{cars/addcar}" th:object="${car}">
+        <div class="form-group">
+            <label class="form-check-lable" for="VIN">VIN</label>
+            <input type="text" th:field="*{VIN}" placeholder="VIN" class="form-control" id="VIN"/>
+            <div class="valid-feedback" th:if="${#fields.hasErrors('VIN')}" th:errors="*{VIN}" ></div>
+        </div>
+        <div class="form-group">
+            <label class="form-check-lable" for="make">Marka</label>
+            <input type="text" th:field="*{make}" placeholder="Marka" class="form-control" id="make" />
+            <div class="valid-feedback" th:if="${#fields.hasErrors('make')}" th:errors="*{make}" ></div>
+        </div>
+        <div class="form-group">
+            <label class="form-check-lable" for="model">Model</label>
+            <input type="text" th:field="*{model}" placeholder="Model" class="form-control" id="model"/>
+            <div class="valid-feedback" th:if="${#fields.hasErrors('model')}" th:errors="*{model}"></div>
+        </div>
+        <div class="form-group">
+            <label class="form-check-lable" for="year">Üretim Yılı</label>
+            <input type="text" th:field="*{year}" placeholder="Yıl" class="form-control" id="year"/>
+            <div class="valid-feedback" th:if="${#fields.hasErrors('year')}" th:errors="*{year}" ></div>
+        </div>
+        <div class="form-group">
+            <label class="form-check-lable" for="mileage">Km/h</label>
+            <input type="text" th:field="*{mileage}" placeholder="Km/h" class="form-control" id="mileage"/>
+            <div class="valid-feedback" th:if="${#fields.hasErrors('mileage')}" th:errors="*{mileage}" ></div>
+        </div>
+        <div class="form-group">
+            <label class="form-check-lable" for="price">Fiyat($)</label>
+            <input type="text" th:field="*{price}" placeholder="Fiyat" class="form-control" id="price"/>
+            <div class="valid-feedback" th:if="${#fields.hasErrors('price')}" th:errors="*{price}" ></div>
+        </div>
+        <button type="submit" value="AddCar" class="btn btn-primary">Ekle</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>
