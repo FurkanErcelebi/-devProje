@@ -20,7 +20,7 @@ public interface CarDao {
 
      ArrayList<Car> selectAllCars() throws SQLException;
 
-     Optional<Car> selectCarByVIN(String VIN);
+     /*Optional<Car>*/ Car selectCarByVIN(String VIN);
 
      int deleteCarById(UUID id);
 
