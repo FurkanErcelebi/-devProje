@@ -30,7 +30,7 @@ public class CarService {
         return carDao.selectAllCars();
     }
 
-    public Optional<Car> getCarById(String VIN)
+    public /*Optional<Car>*/ Car getCarById(String VIN)
     {
         return carDao.selectCarByVIN(VIN);
     }
