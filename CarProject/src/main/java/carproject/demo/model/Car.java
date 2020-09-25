@@ -1,18 +1,9 @@
 package carproject.demo.model;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonSetter;
-import org.hibernate.annotations.Check;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.lang.Nullable;
-
-import javax.persistence.Table;
 import javax.validation.constraints.*;
-import java.time.Year;
 import java.util.UUID;
 
-//@Table(name = "Car")
 public class Car
 {
 
