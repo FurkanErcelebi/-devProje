@@ -1,7 +1,0 @@
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-spring.datasource.url=jdbc:mysql://127.0.0.1:3306/mydb.schema?serverTimezone=UTC
-spring.datasource.username=root
-spring.datasource.password=mxkl335%*#8EX6m37
-package carproject.demo.dao;
-
-create table car(	id BINARY(16) not null,	VIN VARCHAR(5) null,	make VARCHAR(15) null,	model VARCHAR(25) null,	year INT null,	mileage INT null,	price DOUBLE null,	constraint car_pk		primary key (id));

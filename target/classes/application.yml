@@ -1,6 +1,0 @@
-app:
-  datasource:
-    jdbc-url: jdbc:mysql://127.0.0.1:3306/mydb.schema?serverTimezone=UTC
-    username: root
-    password: mxkl335%*#8EX6m37
-    pool-size: 30
